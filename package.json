@@ -1,0 +1,13 @@
+{
+  "name": "api_books",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fast": "tsc && ./public/js/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "gates",
+  "description": "MIT"
+}
