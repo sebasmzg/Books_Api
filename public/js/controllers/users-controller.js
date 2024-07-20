@@ -23,7 +23,6 @@ export class UsersController {
             const headers = {
                 'accept': '*/*',
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer <token>'
             };
             //el RequestInit es un tipo de dato de la libreria de TS, y va a reconocer
             //nuestros parametros method, headers, body

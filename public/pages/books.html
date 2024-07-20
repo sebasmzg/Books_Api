@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="../styles/swiper-bundle.css">
+    <!-- css -->
+    <link rel="stylesheet" href="../styles/books-styles.css">
+    <title>Books API</title>
+</head>
+<body>
+    <header>
+        <h1>Books API</h1>
+    </header>
+    <section class="form-wrapper ">
+        <div class="form-container">
+            <form id="form-books">
+                <h2>New book</h2>
+                <div class="container-input">
+                    <input type="text" placeholder="Title" id="title-register" required>
+                </div>
+                <div class="container-input">
+                    <input type="text" placeholder="Author" id="author-register" required>
+                </div>
+                <div class="container-input">
+                    <textarea placeholder="Description" id="description-register"></textarea>
+                </div>
+                <div class="container-input">
+                    <textarea placeholder="Summary" id="summary-register" ></textarea>
+                </div>
+                <div class="container-input">
+                    <input type="date" id="publication-date-register" placeholder="Publication Date" required>
+                </div>
+                <button class="button-form">Add</button>
+            </form>
+        </div>
+    </section>
+    <section class="books-container swiper">
+        <div class="books-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide"></div>
+            </div>
+        </div>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+    </section>
+    <section class="logout-container">
+        <button id="logout-btn" class="button-form">
+            Logout
+        </button>
+    </section>
+    <section class="modals">
+        <div id="confirmDialog" class="modal">
+            <div class="modal-content">
+                <h3></h3>
+                <button id="confirmYes" class="button-form">Yes</button>
+                <button id="confirmNo" class="button-form">No</button>
+            </div>
+        </div>
+        <div id="bookCreated" class="modal">
+            <div class="modal-content">
+                <h3></h3>
+                <button id="creationSuccess" class="button-form">Ok</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- swiper js -->
+    <script src="../js/swiper-bundle.js"></script>
+    <!-- js -->
+    <script src="../js/books.js"></script>
+    <script type="module" src="../js/index-books.js"></script>
+    <!-- icons scripts-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

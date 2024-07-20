@@ -1,31 +1,32 @@
-/* I Users */
-export interface IBodyRequestLogin {
-    email:	string
-    password:	string
+export interface IBook {
+    "title": string,
+    "author": string,
+    "description": string,
+    "summary": string,
+    "publicationDate": string
 }
-
-export interface IBodyResponseLogin{
-    message: string
-    data: Record<string, string>
-}
-
-export interface IBodyResponseUser {
+export interface IBooksResponse {
     message: string;
-    data:    IDataUser;
+    data:    Record<string,string>;
 }
 
-export interface IDataUser {
-    name:      string;
-    lastName:  string;
-    email:     string;
-    password: string
+export interface IBooksLoadResponse {
+    message: string;
+    data:    IBookData[];
 }
-/* I Books */
 
-export interface ICreateBook {
-    title: string
-    author: string
-    description: string
-    summary: string
-    publicationDate: string
+export interface IBookData {
+    id:              string;
+    title:           string;
+    author:          string;
+    description:     string;
+    summary:         string;
+    publicationDate: Date;
+    createdBy:       string;
+    updatedBy:       null;
+    deletedBy:       null;
+    createdAt:       Date;
+    updatedAt:       Date;
+    deletedAt:       null;
+    files:           any[];
 }

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f4f3;
+}
+
+.container {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+}
+
+.form-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform ease-in 0.5s;
+}
+
+.form-container h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.form-container a{
+    color: black;
+    font-size: 14px;
+    margin: 5px 0 20px 0;
+}
+
+.container-input{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 15px;
+    background-color: #eeeeee;
+}
+
+.container-input input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+}
+
+.button-form {
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #151c4b;
+    color: white;
+}
+
+.button-form:hover{
+    background-color: #1b2981;
+}
+
+/* animations forms */
+
+.sign-up{
+    transform: translateX(-100%);
+}
+.container.toggle .sign-in{
+    transform: translateX(100%);
+}
+.container.toggle .sign-up{
+    transform: translateX(0);
+}
+
+/* Welcome */
+
+.welcome-container {
+    background-color: #151c4b;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform:  translateX(100%);
+    background-color: #151c4b;
+    transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: 50% 0 0 50%;
+}
+
+.container.toggle .welcome-container{
+    transform: translateX(0);
+    border-radius: 0 50% 50% 0;
+    background-color: #151c4b;
+}
+
+.welcome-container .welcome {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 50px;
+    color: white;
+    transition: transform ease-in-out 0.5s;
+}
+
+.welcome-sign-in {
+    transform: translateX(100%);
+}
+
+.welcome-sign-up {
+    transform: translateX(0);
+}
+
+.welcome-container .button-form {
+    border: solid 2px white;
+    background-color: transparent;
+}
+
+.welcome-container .button-form:hover{
+    background-color: #1b2981;
+}
+
+.container.toggle .welcome-sign-in{
+    transform: translateX(0);
+}
+
+.container.toggle .welcome-sign-up{
+    transform: translateX(-100%);
+}
+
+.welcome-container h3{
+    font-size: 40px;
+}
+
+.welcome-container p {
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* eye icons */
+
+.eye-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.eye-icon.closed-icon {
+    display: none;
+}
+
+.eye-icon.open-icon {
+    display: inline;
+}
+
+.open .eye-icon.closed-icon {
+    display: inline;
+}
+
+.open .eye-icon.open-icon {
+    display: none;
+}
