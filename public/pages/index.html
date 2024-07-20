@@ -3,11 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/login-styles.css">
     <title>API Books</title>
 </head>
 <body>
-    
-    <script type="module" src="../js/index.js"></script>
+    <section class="container">
+        <div class="form-container">
+            <form class="sign-in" id="form-login">
+                <h2>Login</h2>
+                <div class="container-input">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" placeholder="Email" id="email-login">
+                </div>
+                <div class="container-input">
+                    <ion-icon name="lock-closed-outline" id="eyeOpen"></ion-icon>
+                    <input type="password" placeholder="Password" class="password" id="password-login">
+                    <div class="toggle-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="eye-icon open-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
+                            <path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="eye-icon closed-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3.53 2.47a.75.75 0 00-1.06 1.06l18 18a.75.75 0 101.06-1.06l-18-18zM22.676 12.553a11.249 11.249 0 01-2.631 4.31l-3.099-3.099a5.25 5.25 0 00-6.71-6.71L7.759 4.577a11.217 11.217 0 014.242-.827c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113z" />
+                            <path d="M15.75 12c0 .18-.013.357-.037.53l-4.244-4.243A3.75 3.75 0 0115.75 12zM12.53 15.713l-4.243-4.244a3.75 3.75 0 004.243 4.243z" />
+                            <path d="M6.75 12c0-.619.107-1.213.304-1.764l-3.1-3.1a11.25 11.25 0 00-2.63 4.31c-.12.362-.12.752 0 1.114 1.489 4.467 5.704 7.69 10.675 7.69 1.5 0 2.933-.294 4.242-.827l-2.477-2.477A5.25 5.25 0 016.75 12z" />
+                        </svg>
+                    </div>
+                </div>
+                <a href="#">¿Forgot password?</a>
+                <button class="button-form">Login</button>
+            </form>
+        </div>
+        <div class="form-container">
+            <form class="sign-up" id="form-register">
+                <h2>Sign Up</h2>
+                <div class="container-input">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" placeholder="Name" id="name-register">
+                </div>
+                <div class="container-input">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" placeholder="Last Name" id="lastName-register">
+                </div>
+                <div class="container-input">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" placeholder="Email" id="email-register">
+                </div>
+                <div class="container-input">
+                    <ion-icon name="bag-add-outline"></ion-icon>
+                    <input type="password" class="password" placeholder="Choose password" id="password-register">
+                    <div class="toggle-button">
+                        <div class="toggle-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="eye-icon open-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
+                                <path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="eye-icon closed-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3.53 2.47a.75.75 0 00-1.06 1.06l18 18a.75.75 0 101.06-1.06l-18-18zM22.676 12.553a11.249 11.249 0 01-2.631 4.31l-3.099-3.099a5.25 5.25 0 00-6.71-6.71L7.759 4.577a11.217 11.217 0 014.242-.827c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113z" />
+                                <path d="M15.75 12c0 .18-.013.357-.037.53l-4.244-4.243A3.75 3.75 0 0115.75 12zM12.53 15.713l-4.243-4.244a3.75 3.75 0 004.243 4.243z" />
+                                <path d="M6.75 12c0-.619.107-1.213.304-1.764l-3.1-3.1a11.25 11.25 0 00-2.63 4.31c-.12.362-.12.752 0 1.114 1.489 4.467 5.704 7.69 10.675 7.69 1.5 0 2.933-.294 4.242-.827l-2.477-2.477A5.25 5.25 0 016.75 12z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-input">
+                    <ion-icon name="bag-check-outline"></ion-icon>
+                    <input type="password" class="password" placeholder="Confirm password" id="confirm-password-register">
+                    <div class="toggle-button">
+                        <div class="toggle-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="eye-icon open-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
+                                <path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z" clip-rule="evenodd" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="eye-icon closed-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3.53 2.47a.75.75 0 00-1.06 1.06l18 18a.75.75 0 101.06-1.06l-18-18zM22.676 12.553a11.249 11.249 0 01-2.631 4.31l-3.099-3.099a5.25 5.25 0 00-6.71-6.71L7.759 4.577a11.217 11.217 0 014.242-.827c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113z" />
+                                <path d="M15.75 12c0 .18-.013.357-.037.53l-4.244-4.243A3.75 3.75 0 0115.75 12zM12.53 15.713l-4.243-4.244a3.75 3.75 0 004.243 4.243z" />
+                                <path d="M6.75 12c0-.619.107-1.213.304-1.764l-3.1-3.1a11.25 11.25 0 00-2.63 4.31c-.12.362-.12.752 0 1.114 1.489 4.467 5.704 7.69 10.675 7.69 1.5 0 2.933-.294 4.242-.827l-2.477-2.477A5.25 5.25 0 016.75 12z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <button class="button-form">Sign Up</button>
+            </form>
+        </div>
+        <div class="welcome-container">
+            <div class="welcome welcome-sign-up">
+                <h3>Welcome</h3>
+                <p>Login to use the API Books features</p>
+                <button class="button-form" id="btn-sign-up">Sign up</button>
+            </div>
+            <div class="welcome welcome-sign-in">
+                <h3>¡Hello!</h3>
+                <p>Sign up with your personal data to use all the features of API Books</p>
+                <button class="button-form" id="btn-sign-in">Sign in</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- scripts -->
+    <script type="module" src="../js/register.js"></script>
+    <script type="module" src="../js/login.js" ></script>
+    <script src="../js/login-form.js"></script>
+
+    <!-- icons scripts-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
