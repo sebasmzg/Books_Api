@@ -14,7 +14,7 @@ const description = <HTMLInputElement> document.getElementById('description-regi
 const summary = <HTMLInputElement> document.getElementById('summary-register');
 const publicationDate = <HTMLInputElement> document.getElementById('publication-date-register')
 /* token */
-const token: string | null= localStorage.getItem('token')
+const token: string | null= localStorage.getItem('token');
 /* id cache */
 let idCache: string | undefined;
 /* logout */
@@ -50,6 +50,7 @@ if(!token){
 
     /* load books */
     document.addEventListener('DOMContentLoaded',loadBooks)
+
 
     /* create books */
     form.addEventListener('submit',async (e:Event)=>{
@@ -87,7 +88,7 @@ if(!token){
     booksContainer.addEventListener('click', async (e: Event)=>{
         const target = e.target as HTMLElement;
 
-        if(target instanceof HTMLElement){
+        if(target instanceof HTMLElement ){
             const action = target.dataset.action;
             const bookId = target.dataset.id;
             if(action === 'update' && bookId){

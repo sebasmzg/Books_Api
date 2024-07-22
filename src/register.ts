@@ -23,16 +23,12 @@ form.addEventListener('submit', async (e: Event)=>{
         const userController: UsersController = new UsersController(domain);
         try {
             const resultRegister = await userController.createUSer(data);
-            console.log('User created',resultRegister.data);
-            
             form.reset();
-            alert('User created')
         } catch (error) {
-            console.error('Create user failed');
-            
+            console.error('Create user failed');   
         }
     } else {
-        alert('Passwords don´t match')
+        alert('Passwords don’t match')
     }
 
 })

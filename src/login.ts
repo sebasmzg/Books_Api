@@ -19,7 +19,6 @@ form.addEventListener('submit',async (e: Event)=>{
         const resultLogin = await usersController.postLogin(dataToLogin);
         if(resultLogin.data.token){
             localStorage.setItem('token',resultLogin.data.token);
-            console.log('token: ', resultLogin.data.token);
             
             window.location.href = 'books.html'
             form.reset();

@@ -23,7 +23,6 @@ form.addEventListener('submit', (e) => __awaiter(void 0, void 0, void 0, functio
         const resultLogin = yield usersController.postLogin(dataToLogin);
         if (resultLogin.data.token) {
             localStorage.setItem('token', resultLogin.data.token);
-            console.log('token: ', resultLogin.data.token);
             window.location.href = 'books.html';
             form.reset();
         }

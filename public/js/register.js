@@ -27,15 +27,13 @@ form.addEventListener('submit', (e) => __awaiter(void 0, void 0, void 0, functio
         const userController = new UsersController(domain);
         try {
             const resultRegister = yield userController.createUSer(data);
-            console.log('User created', resultRegister.data);
             form.reset();
-            alert('User created');
         }
         catch (error) {
             console.error('Create user failed');
         }
     }
     else {
-        alert('Passwords don´t match');
+        alert('Passwords don’t match');
     }
 }));
